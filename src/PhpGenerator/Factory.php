@@ -13,6 +13,7 @@ use Nette;
 use PhpParser;
 use PhpParser\Node;
 use PhpParser\ParserFactory;
+use PhpParser\Parser\Php7 as ParserPhp7;
 
 
 /**
@@ -303,7 +304,8 @@ final class Factory
 		}
 
 		$lexer = new PhpParser\Lexer(['usedAttributes' => ['startFilePos', 'endFilePos']]);
-		$parser = (new ParserFactory)->create(ParserFactory::ONLY_PHP7, $lexer);
+		$parser = new ParserPhp7($lexer);
+
 		$code = file_get_contents($file);
 		$code = str_replace("\r\n", "\n", $code);
 		$stmts = $parser->parse($code);
