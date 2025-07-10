@@ -28,7 +28,10 @@
 		"nikic/php-parser": "to use ClassType::withBodiesFrom() & GlobalFunction::withBodyFrom()"
 	},
 	"autoload": {
-		"classmap": ["src/"]
+		"classmap": ["src/"],
+		"psr-4": {
+			"Nette\\": "src"
+		}
 	},
 	"minimum-stability": "dev",
 	"scripts": {
