@@ -1,5 +1,6 @@
 {
 	"name": "nette/php-generator",
+	"type": "library",
 	"description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 7.4 features.",
 	"keywords": ["nette", "php", "code", "scaffolding"],
 	"homepage": "https://nette.org",
@@ -16,7 +17,7 @@
 	],
 	"require": {
 		"php": ">=7.1",
-		"nette/utils": "^2.4.2 || ^3.0 || ^4.0",
+		"nette/utils": "^2.4.2 || ^3.0 || ^4.0"
 	},
 	"require-dev": {
 		"nette/tester": "^2.0",
@@ -28,9 +29,8 @@
 		"nikic/php-parser": "to use ClassType::withBodiesFrom() & GlobalFunction::withBodyFrom()"
 	},
 	"autoload": {
-		"classmap": ["src/"],
 		"psr-4": {
-			"Nette\\": "src"
+			"Nette\\": "src/"
 		}
 	},
 	"minimum-stability": "dev",
